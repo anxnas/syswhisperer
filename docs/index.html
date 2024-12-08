@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SysWhisperer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-header">
+                <h1>SysWhisperer</h1>
+                <span class="version">v1.0.0</span>
+            </div>
+            <ul>
+                <li><a href="#overview">Обзор</a></li>
+                <li><a href="#installation">Установка</a></li>
+                <li><a href="#usage">Использование</a></li>
+                <li><a href="#examples">Примеры</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Баннер загрузки -->
+    <div class="download-banner">
+        <div class="download-content">
+            <div class="version-info">
+                <h2>Текущая версия: 1.0.0</h2>
+                <p>Последнее обновление: 8 декабря 2024</p>
+            </div>
+            <a href="#" class="download-button">
+                <i class="fas fa-download"></i>
+                Скачать SysWhisperer
+            </a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция обзора -->
+        <section id="overview">
+            <h2>Обзор</h2>
+            <p>SysWhisperer - это утилита для анализа системной информации, которая предоставляет подробные данные о вашем компьютере, включая процессор, память и видеокарты. Поддерживает работу на Windows и Linux.</p>
+
+            <h3>Основные возможности:</h3>
+            <ul>
+                <li>Получение информации о процессоре (количество ядер, частота, загрузка)</li>
+                <li>Мониторинг оперативной памяти</li>
+                <li>Поддержка видеокарт NVIDIA, AMD и Intel</li>
+                <li>Экспорт данных в JSON</li>
+                <li>Кроссплатформенность</li>
+            </ul>
+        </section>
+
+        <!-- Секция установки -->
+        <section id="installation">
+            <h2>Установка</h2>
+
+            <h3>Windows</h3>
+            <ol class="installation-steps">
+                <li>
+                    <h4>Скачивание</h4>
+                    <p>Скачайте последнюю версию SysWhisperer для Windows (файл syswhisperer-windows.exe) со <a href="https://github.com/username/SysWhisperer/releases/latest" target="_blank">страницы релизов</a>.</p>
+                </li>
+                <li>
+                    <h4>Запуск</h4>
+                    <p>Запустите программу из командной строки:</p>
+                    <div class="code-block">
+                        <pre><code>.\syswhisperer-windows.exe --version</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Опционально: Добавление в PATH</h4>
+                    <p>Для удобства использования можно добавить путь к программе в системную переменную PATH:</p>
+                    <ol class="sub-steps">
+                        <li>Создайте папку для программы, например: <code>C:\Program Files\SysWhisperer</code></li>
+                        <li>Переместите exe файл в эту папку</li>
+                        <li>Откройте "Система" → "Дополнительные параметры системы" → "Переменные среды"</li>
+                        <li>В разделе "Системные переменные" найдите PATH</li>
+                        <li>Нажмите "Изменить" и добавьте путь к папке</li>
+                        <li>После этого программу можно запускать просто как <code>syswhisperer-windows.exe</code> из любой папки</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3>Linux</h3>
+            <ol class="installation-steps">
+                <li>
+                    <h4>Скачивание</h4>
+                    <p>Скачайте последнюю версию SysWhisperer для Linux (файл syswhisperer-linux) со <a href="https://github.com/username/SysWhisperer/releases/latest" target="_blank">страницы релизов</a>.</p>
+                </li>
+                <li>
+                    <h4>Установка</h4>
+                    <div class="code-block">
+                        <pre><code>chmod +x syswhisperer-linux
+sudo mv syswhisperer-linux /usr/local/bin/syswhisperer</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Проверка установки</h4>
+                    <div class="code-block">
+                        <pre><code>syswhisperer --version</code></pre>
+                    </div>
+                </li>
+            </ol>
+
+            <h3>Установка из исходного кода</h3>
+            <ol class="installation-steps">
+                <li>
+                    <h4>Клонирование репозитория</h4>
+                    <div class="code-block">
+                        <pre><code>git clone https://github.com/username/SysWhisperer.git
+cd SysWhisperer</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Установка зависимостей</h4>
+                    <div class="code-block">
+                        <pre><code>pip install -r requirements.txt</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <h4>Запуск</h4>
+                    <div class="code-block">
+                        <pre><code>python main.py --version</code></pre>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="note-block">
+                <h4>Примечание</h4>
+                <p>Для работы программы требуются права администратора для доступа к информации о системе. В Linux используйте sudo, в Windows запускайте от имени администратора.</p>
+            </div>
+        </section>
+
+        <!-- Секция использования -->
+        <section id="usage">
+            <h2>Использование</h2>
+            <h3>Командная строка</h3>
+            <div class="code-block">
+                <pre><code># Базовое использование
+syswhisperer
+
+# Только информация о GPU
+syswhisperer --no-cpu --no-memory
+
+# Экспорт в JSON
+syswhisperer --export result.json</code></pre>
+            </div>
+
+            <h3>Параметры командной строки</h3>
+            <table>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Описание</th>
+                </tr>
+                <tr>
+                    <td>--version</td>
+                    <td>Показать версию программы</td>
+                </tr>
+                <tr>
+                    <td>--no-cpu</td>
+                    <td>Не показывать информацию о процессоре</td>
+                </tr>
+                <tr>
+                    <td>--no-memory</td>
+                    <td>Не показывать информацию о памяти</td>
+                </tr>
+                <tr>
+                    <td>--no-gpu</td>
+                    <td>Не показывать информацию о видеокарте</td>
+                </tr>
+                <tr>
+                    <td>--export FILE</td>
+                    <td>Экспортировать данные в JSON файл</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Секция примеров -->
+        <section id="examples">
+            <h2>Примеры</h2>
+            <h3>Пример вывода</h3>
+            <div class="code-block output">
+                <pre>Система: Windows 10
+
+Видеокарта(ы):
+
+GPU 1:
+- Название: Radeon RX550/550 Series
+- Видеопамять: 2048 МБ
+- Версия драйвера: 31.0.21912.14
+- Видеопроцессор: AMD Radeon Graphics Processor (0x699F)
+- Тип видеопамяти: 2
+- Текущее разрешение: 1680x1050
+
+Процессор:
+- Количество ядер: 12
+- Текущая частота: 3400.00 МГц
+- Загрузка CPU: 0.8%
+
+Оперативная память:
+- Всего: 7 ГБ
+- Используется: 7 ГБ
+- Загрузка памяти: 93.3%</pre>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/anxnas/syswhisperer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:ananasicsoftwareinc@gmail.com"><i class="fas fa-bug"></i> Сообщить об ошибке</a>
+            </div>
+            <p>SysWhisperer 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
