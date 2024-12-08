@@ -20,21 +20,21 @@
 ## 📥 Установка
 
 ### Windows
-1. Скачайте последнюю версию [syswhisperer-windows.exe](https://github.com/anxnas/syswhisperer/releases/latest)
+1. Скачайте последнюю версию [syswhisperer.exe](https://github.com/anxnas/syswhisperer/releases/latest)
 2. Запустите из командной строки:
 ```
-syswhisperer-windows.exe --version
+syswhisperer.exe --version
 ```
 
 ### Linux
 1. Скачайте последнюю версию
 ```
-wget https://github.com/anxnas/syswhisperer/releases/latest/download/syswhisperer-linux
+wget https://github.com/anxnas/syswhisperer/releases/latest/download/syswhisperer
 ```
 2. Сделайте файл исполняемым и переместите в /usr/local/bin
 ```
-chmod +x syswhisperer-linux
-sudo mv syswhisperer-linux /usr/local/bin/syswhisperer
+chmod +x syswhisperer
+sudo mv syswhisperer /usr/local/bin/syswhisperer
 ```
 
 ### Из исходного кода
