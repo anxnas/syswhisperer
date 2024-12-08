@@ -61,6 +61,9 @@ class GPUInfo:
                 }
                 gpu_info.append(gpu_data)
             return gpu_info
+        except ImportError:
+            print("Не найден модуль WMI.")
+            return []
         except Exception as e:
             print(f"Ошибка при получении информации о GPU в Windows: {e}")
             return []
